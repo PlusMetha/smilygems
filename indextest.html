@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Agency - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        header.masthead {
+            position: relative;
+            height: 100vh;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        #loadingGif {
+            width: 50px; /* Adjust width */
+            height: 50px; /* Adjust height */
+        }
+    </style>
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/logo.png" style="width: 100px; height: auto;" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-heading ">trace YOUR</div>
+            <div class="masthead-heading">Authenticity</div>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-4">
+                        <div class="form-group mb-md-0" style="height: 100%;">
+                            <input class="form-control" id="phone" type="tel" placeholder="Your asset ID" required style="height: 100%;" />
+                            <div class="invalid-feedback">ENTER YOUR UNIQUE CODE</div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="text-center">
+                            <button class="btn btn-danger btn-lg btn-block text-uppercase" id="submitButton" type="submit">Search...</button>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <div id="overlay">
+        <img id="loadingGif" src="assets/loading.gif" alt="Loading..." />
+    </div>
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Smiley Gems 2024</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const assetID = document.getElementById('phone').value;
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'flex';
+            setTimeout(() => {
+                window.location.href = `${assetID}.html`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

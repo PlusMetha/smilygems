@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Agency - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                  <!--<a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-logo.svg" alt="..." /></a>-->
+                  <a class="navbar-brand" href="#page-top"><img src="assets/img/logo.png" style="width: 100px; height: auto;" alt="..." /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>                    </ul>
+                </div>
+            </div>
+        </nav>
+        <style>
+            header.masthead{
+                position: relative;
+                height: 100vh;
+            }
+        </style>
+ 
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase">Smiley Gems Traceability</div>
+                <div class="masthead-subheading">Trace your asset with unique serial number and password</div>
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN" onsubmit="handleSubmit(event)">
+                    <div class="row align-items-stretch mb-5 ">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group mb-md-0" style="height: 100%;">
+                                <input class="form-control" id="phone" type="tel" placeholder="Your asset ID" data-sb-validations="required" style="height: 100%;"/>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Enter your unique code</div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="text-center">
+                                <button class="btn btn-danger btn-lg btn-block text-uppercase disabled" id="submitButton" type="submit">Search...</button>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitSuccessMessage" >
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Searching</div>
+                       </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                </form>
+            </div>
+        </header>
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<style>
+    header.masthead{
+        position: relative;
+        height: 100vh;
+    }
+    #contactForm {
+        position: relative;
+    }
+    #phone {
+        height: calc(100% - 2px); /* Subtract 2px to account for border */
+    }
+    .btn-danger {
+        height: 100%;
+    }
+    #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Ensure the loading overlay is on top of everything */
+    }
+    #loading img {
+        max-width: 100px; /* Adjust the max-width of the loading GIF */
+    }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/logo.png" style="width: 100px; height: auto;" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-heading text-uppercase">Smiley Gems Traceability</div>
+            <div class="masthead-subheading">Trace your asset with unique serial number and password</div>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="row align-items-stretch mb-5 ">
+                    <div class="col-md-4 offset-md-4">
+                        <input class="form-control" id="phone" type="tel" placeholder="Your asset ID" required />
+                        <div class="invalid-feedback">Enter your unique code</div>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-danger btn-lg btn-block text-uppercase" type="submit">Search</button>
+                    </div>
+                </div>
+                <div class="text-center d-none" id="loading">
+                    <img src="https://i.gifer.com/ZKZg.gif" alt="Loading..." />
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            var form = document.getElementById('contactForm');
+            var loading = document.getElementById('loading');
+            var phoneInput = document.getElementById('phone');
+            
+            // Show loading indicator
+            loading.classList.remove('d-none');
+
+            // Simulate form submission delay
+            setTimeout(function() {
+                // Hide loading indicator
+                loading.classList.add('d-none');
+                // Redirect to next page
+                window.location.href = 'index3.html'; // Replace 'next_page.html' with your actual page URL
+            }, 2000); // Adjust delay as needed (in milliseconds)
+        }
+    </script>
+</body>
+</html>
